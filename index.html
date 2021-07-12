@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://raw.githack.com/programming2007/illustration/main/illustration.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:serif;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-image:url(https://source.unsplash.com/1600x900/?collections/3330448/cities);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        .card {
+            width: 100%;
+            max-width: 350px;
+            height: 72%;
+            background-color: #000000d0;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1em;
+            color: white;
+        }
+
+        .search {
+            display: flex;
+            position: absolute;
+            top: calc(50% - 120px);
+            left: calc(50% - 112px);
+
+        }
+
+        input {
+            background-color:white;
+            color:black;
+            padding: 1em;
+        }
+
+        ::placeholder {
+            color: rgb(0, 0, 0);
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            background-color: #00000000;
+            border: 0;
+            margin-left: 5px;
+        }
+
+        img {
+            width: 25px;
+        }
+
+        .weather {
+            position: absolute;
+            left: calc(50% - 120px);
+        }
+
+        .i {
+            display: flex;
+            text-transform : capitalize;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="search">
+                <input type="text" class="input" placeholder="Search" id="inp">
+                <button id="btn"><img src="https://image.flaticon.com/icons/png/512/751/751381.png"></button>
+            </div>
+
+            <div class="weather">
+                <br>
+                <h2 class="city">Weather in --</h2>
+                <br>
+                <div class="temp"><h1>--</h1></div>
+                <div class="i">
+                    <img src="https://openweathermap.org/img/wn/01d.png" alt="" class="icon">
+                <div class="description">--</div>
+                </div>
+                <div class="humidity">---</div>
+                <div class="wind">---</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+        
+</body>
+
+</html>
